@@ -1,0 +1,100 @@
+<section id="about" class="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-content">
+        <div class="about-text">
+            <p>Hello! I'm Romando Purba, a backend developer with a passion for building scalable systems. I started my journey with web development over a decade ago and have since mastered several technologies in backend programming.</p>
+            <p>Technologies I’ve been working with recently:</p>
+            <ul class="skills-list">
+                <li>Laravel</li>
+                <li>NestJS</li>
+                <li>Rust</li>
+                <li>PostgreSQL</li>
+                <li>Docker</li>
+            </ul>
+        </div>
+        <div class="about-image">
+            <div class="about-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D" alt="Romando Purba - Backend Developer">
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* About Section */
+    .about {
+        padding: 100px 0;
+    }
+
+    .section-title {
+        font-size: 32px;
+        color: #ccd6f6;
+        display: flex;
+        align-items: center;
+    }
+
+    .section-title::after {
+        content: "";
+        display: block;
+        height: 1px;
+        width: 300px;
+        background-color: #233554;
+        margin-left: 20px;
+    }
+
+    .about-content {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        gap: 50px;
+        align-items: center;
+    }
+
+    .about-text p {
+        margin-bottom: 15px;
+    }
+
+    .skills-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        list-style: none;
+    }
+
+    .skills-list li {
+        display: flex;
+        align-items: center;
+    }
+
+    .skills-list li::before {
+        content: "▹";
+        color: #64ffda;
+        margin-right: 10px;
+    }
+
+    .about-image {
+        position: relative;
+    }
+
+    .about-image-wrapper {
+        position: relative;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+
+    .about-image img {
+        width: 100%;
+        height: auto;
+        filter: grayscale(100%);
+        transition: filter 0.3s ease;
+    }
+
+    .about-image:hover img {
+        filter: grayscale(0%);
+    }
+
+    @media (max-width: 768px) {
+        .about-content {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

@@ -1,0 +1,62 @@
+<section class="hero">
+    <div class="hero-content">
+        <h1>Hi, I'm Romando Purba</h1>
+        <h2>Backend Developer.</h2>
+        <h3>Building scalable, secure web applications.</h3>
+        <p>I specialize in backend development, focusing on creating robust APIs and database solutions. With expertise in technologies like Laravel, NestJS, Rust, PostgreSQL, and Docker, I help build high-performance applications.</p>
+    </div>
+</section>
+<style>
+    /* Hero Section */
+    .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        padding-top: 80px;
+    }
+
+    .hero-content {
+        max-width: 800px;
+    }
+
+    .hero-content h1 {
+        font-size: 16px;
+        color: #64ffda;
+        margin-bottom: 20px;
+        opacity: 0;
+        animation: fadeUp 0.5s ease forwards;
+    }
+
+    .hero-content h2 {
+        font-size: 80px;
+        color: #ccd6f6;
+        margin-bottom: 10px;
+        opacity: 0;
+        animation: fadeUp 0.5s ease forwards 0.2s;
+    }
+
+    .hero-content h3 {
+        font-size: 60px;
+        color: #8892b0;
+        margin-bottom: 20px;
+        opacity: 0;
+        animation: fadeUp 0.5s ease forwards 0.4s;
+    }
+
+    .hero-content p {
+        font-size: 20px;
+        max-width: 540px;
+        margin-bottom: 30px;
+        opacity: 0;
+        animation: fadeUp 0.5s ease forwards 0.6s;
+    }
+
+    @media (max-width: 768px) {
+        .hero-content h2 {
+            font-size: 60px;
+        }
+        .hero-content h3 {
+            font-size: 40px;
+        }
+    }
+</style>

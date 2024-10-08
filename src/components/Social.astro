@@ -1,0 +1,94 @@
+---
+import { defaultConfig } from "../config/default";
+
+const { socialLinks } = defaultConfig.site;
+---
+
+<div class="social-links">
+    {socialLinks.map(link => (
+        <a href={link.url} target="_blank" rel="noopener noreferrer">
+            {link.name === "Github" && <i class="fab fa-github"></i>}
+            {link.name === "linkedIn" && <i class="fab fa-linkedin-in"></i>}
+        </a>
+    ))}
+</div>
+
+<div class="email-link">
+    {(() => {
+        const emailLink = socialLinks.find(({ name }) => name.toLocaleLowerCase() === 'email');
+        return emailLink ? (
+            <a href={`mailto:${emailLink.url}`}>{emailLink.url}</a>
+        ) : null;
+    })()}
+</div>
+
+<style>
+    /* Social Links */
+    .social-links {
+        position: fixed;
+        bottom: 0;
+        left: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding-bottom: 30px;
+    }
+
+    .social-links::after {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 90px;
+        background-color: #8892b0;
+        margin: 0 auto;
+    }
+
+    .social-links a {
+        color: #8892b0;
+        font-size: 20px;
+        transition: all 0.3s ease;
+    }
+
+    .social-links a:hover {
+        color: #64ffda;
+        transform: translateY(-3px);
+    }
+
+    /* Email Link */
+    .email-link {
+        position: fixed;
+        bottom: 0;
+        right: 40px;
+        writing-mode: vertical-rl;
+        padding-bottom: 30px;
+    }
+
+    .email-link a {
+        color: #8892b0;
+        text-decoration: none;
+        font-size: 14px;
+        letter-spacing: 0.1em;
+        transition: all 0.3s ease;
+    }
+
+    .email-link a:hover {
+        color: #64ffda;
+        transform: translateY(-3px);
+    }
+
+    .email-link::after {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 90px;
+        background-color: #8892b0;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+        .social-links, .email-link {
+            display: none;
+        }
+    }
+</style>
